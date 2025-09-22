@@ -1,0 +1,64 @@
+.group-list .group-header h2 {
+    color: var(--color-text-white);
+}
+body, .main-menu-bg.main-menu-kiosk .nav.nav-tabs.menu-type li.active a:not(.cart-link), .main-menu-bg .nav.nav-tabs li a:not(.cart-link), .main-menu-bg .nav.nav-tabs li a:not(.cart-link):hover, .btn-lang.styled, .btn-currency.styled, .btn-search.btn-default, .btn-lang.styled:hover, .btn-currency.styled:hover, .btn-search.btn-default:hover, .styled, .t-align-right > div small, .new-main-resume-content .round-icon i {
+    color: var(--color-text) !important;
+}
+.gift-voucher-list > div:last-child > div > div.gift-voucher-group > div.gift-voucher.active, ul.nav.navbar-nav li.active a, ul.nav.navbar-nav li.active a:focus, ul.nav.navbar-nav li.active:hover a {
+    background: var(--color-bg-3) !important;
+}
+.btn, .occupancy-block .rounded-input.navbar-collapse .nav.navbar-nav.input-group span button {
+    background-color: var(--color-btn) !important;
+    border: none !important;
+    color: var(--color-btn-txt) !important;
+}
+.btn:hover, .btn:active:hover {
+    opacity: 0.8;
+    border: none !important;
+    color: var(--color-btn-txt) !important;
+}
+a, a:link, a:visited, a:hover, a:focus, .bluelink, ul.nav.navbar-nav li a, ul.nav.navbar-nav li:hover a {
+    color: var(--color-link);
+}
+.other-rates-link {
+    background-color: var(--color-btn);
+}
+.other-rates-link a, .other-rates-link a:hover {
+    color: var(--color-btn-txt);
+}
+.gift-card .gift-card-photo .gift-card-description p {
+    color: var(--color-text-white);
+}
+.datetimepicker {
+    background-color: #fff !important;
+}
+.cart-menu .styled.fa-chevron-down:before, .cart-menu .styled.btn-lang.la-angle-down:before, .btn-currency.styled:before {
+    background-color: transparent !important;
+}
+.btn:before {
+    content: none !important;
+}
+.langs-magic, .logo-new-BE {
+    display: none;
+}
+.line.d-inline-block.m-right-40, .line.d-inline-block.m-right-40 b, .new-main-resume-content .line, .arrival-date-container.col-xs-12.no-padding .rounded-input.input-group .input-group-addon.button-date.f-size-14 bg-primary.c-pointer i.las, .gift-voucher-list.gift-list-cart.rounded-box.m-top-40 .col-xs-12.col-sm-6 p {
+    color: var(--color-text-white);
+}
+.bx-wrapper .bx-controls-direction a.bx-next, .bx-wrapper .bx-controls-direction a.bx-prev {
+    background-color: var(--color-btn);
+}
+.section-shop-products.show-loader .main-menu-bg .nav.nav-tabs li a span.menu-name {
+    color: var(--color-text-white);
+}
+.section-our-offers.show-loader .main-menu-bg .nav.nav-tabs li a span.menu-name {
+    color: var(--color-text);
+}
+.DateLength-offerForm i.las.la-calendar-alt, .input-group-btn .input-number-substract.substract-to-cart i.las.la-minus, .input-group-btn .input-number-add.new-add-to-cart i.las.la-plus {
+    color: var(--color-text-white);
+}
+.cart-offer-resume-container .cart-offer-resume .d-inline-block.div-resas .v-align-middle.pull-right.c-pointer.no-wrap.remove-from-cart-link i.las.la-trash-alt {
+    color: var(--color-text-white);
+}
+.cart-menu a.btn-cart {
+    background: #fff !important;
+}

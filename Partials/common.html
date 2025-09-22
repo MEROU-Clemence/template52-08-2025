@@ -1,0 +1,224 @@
+{{< CommonMetaTags}}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta id="Meta-lang" http-equiv="content-language" content="{{CurrentLang.IsoLang}}" data-date-format="{{JsDateFormatForBe}}">
+{{{PixelFacebook}}}
+{{{OtherScripts}}}
+{{{GoogleTagManagerHead}}}
+{{/CommonMetaTags}}
+
+{{< FaviconTags}}
+<link rel="shortcut icon" type="image/x-icon" href="{{Url}}/{{FaviconName}}" />
+{{/FaviconTags}}
+
+{{< CommonStylesheets}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{TitlePoliceImportUrl}}" rel="stylesheet">
+<link href="{{TextPoliceImportUrl}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons/css/all/all.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/bootstrap/bootstrap-min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/owl.carousel.2.3.4.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/owl.theme.default.2.3.4.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="https://static.elloha.com/webgen/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/common.min.css?v={{TemplateName}}_{{CacheVar}}">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/elloha-template-52.min.css?v={{TemplateName}}_{{CacheVar}}">
+<link rel="stylesheet" type="text/css" href="{{Url}}/css/custom.css?v={{TemplateName}}_{{CacheVar}}">
+{{/CommonStylesheets}}
+
+{{< CommonScripts}}
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery-2.2.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/plugins.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/bootstrap/bootstrap-min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/owl.carousel.2.3.4.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/mandrill/mandrill.min.js"></script>
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js" crossorigin async data-callback="initMapKit" data-libraries="map" data-initial-token="{{TokenMapKit}}"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/skycons.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/lightgallery-all.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/config.js?v={{Template}}_{{CacheVar}}"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.fittext.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/jquery.ebcaptcha.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/common.min.js"></script>
+<script type="text/javascript" src="{{Url}}/js/elloha-template-52.min.js"></script>
+<script type="text/javascript" src="https://static.elloha.com/webgen/js/newcookieconsent.min.js"></script>
+<script src="https://js.hcaptcha.com/1/api.js"></script>
+{{/CommonScripts}}
+
+{{< ScriptCalendarClick}}
+<script>
+    var onAvailableDateSelect = function () {
+        var dpWidget = window.widgetDatePicker["ConstellationWidgetContainerBE"];
+
+        if (dpWidget === null || dpWidget === undefined) {
+            return;
+        }
+
+        dpWidget.setDate(this.getMoment()._d);
+        $('#ConstellationWidgetContainerBE #BtnLaunchBooking').trigger('click');
+    };
+</script>
+{{/ScriptCalendarClick}}
+
+{{< Header}}
+<header class="header-big-contain">
+    <div class="header-global">
+        <div class="first-nav">
+            <div class="pictos-header-contact">
+                {{#HasWhatsappWidgetActivated}}
+                <a href="{{WhatsappUrl}}" class="disappear-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                        <path d="M8.00001 0.5C12.4184 0.5 16 4.30545 16 8.99999C16 13.6945 12.4184 17.5 8.00001 17.5C6.58621 17.5026 5.19727 17.105 3.97601 16.3482L0.00321236 17.5L1.08481 13.2772C0.371979 11.9792 -0.0024653 10.5028 1.22149e-05 8.99999C1.22149e-05 4.30545 3.58161 0.5 8.00001 0.5ZM5.27361 5.005L5.11361 5.0118C5.01016 5.01937 4.90909 5.04824 4.81601 5.0968C4.72927 5.14908 4.65006 5.21435 4.58081 5.2906C4.48481 5.38665 4.43041 5.46995 4.37201 5.5507C4.07611 5.95946 3.91679 6.46131 3.91921 6.977C3.92081 7.39349 4.02321 7.79894 4.18321 8.17804C4.51041 8.94474 5.04881 9.75649 5.75921 10.5087C5.93041 10.6898 6.09841 10.8717 6.27921 11.0408C7.16195 11.8665 8.21383 12.462 9.3512 12.7799L9.8056 12.8539C9.9536 12.8624 10.1016 12.8505 10.2504 12.8428C10.4834 12.8298 10.7108 12.7628 10.9168 12.6465C11.0215 12.589 11.1237 12.5266 11.2232 12.4595C11.2232 12.4595 11.2571 12.4351 11.3232 12.383C11.4312 12.298 11.4976 12.2376 11.5872 12.1382C11.6544 12.0645 11.7104 11.979 11.7552 11.8815C11.8176 11.7429 11.88 11.4786 11.9056 11.2584C11.9248 11.0901 11.9192 10.9983 11.9168 10.9414C11.9136 10.8504 11.8424 10.7561 11.7648 10.7161L11.2992 10.4943C11.2992 10.4943 10.6032 10.1721 10.1776 9.96644C10.1331 9.94584 10.0853 9.93403 10.0368 9.93159C9.98206 9.92551 9.92673 9.932 9.87455 9.95062C9.82238 9.96925 9.77458 9.99957 9.7344 10.0395C9.7304 10.0378 9.6768 10.0863 9.0984 10.8309C9.06521 10.8783 9.01948 10.9141 8.96705 10.9338C8.91462 10.9535 8.85786 10.9561 8.804 10.9414C8.75187 10.9266 8.7008 10.9079 8.6512 10.8853C8.552 10.8411 8.5176 10.8241 8.4496 10.7935C7.9903 10.5809 7.56516 10.2932 7.18961 9.94094C7.08881 9.84744 6.99521 9.74544 6.89921 9.64684C6.5845 9.32657 6.31021 8.96428 6.08321 8.56904L6.03601 8.48829C6.00262 8.43372 5.97524 8.37526 5.95441 8.31404C5.92401 8.18909 6.00321 8.08879 6.00321 8.08879C6.00321 8.08879 6.19761 7.86269 6.28801 7.74029C6.37601 7.62129 6.45041 7.5057 6.49841 7.42325C6.59281 7.26175 6.62241 7.096 6.57281 6.96765C6.34881 6.38625 6.11734 5.80796 5.87841 5.2328C5.83121 5.1189 5.69121 5.0373 5.56401 5.02115C5.52081 5.01548 5.47761 5.01095 5.43441 5.00755C5.32699 5.001 5.21928 5.00214 5.11201 5.01095L5.27361 5.005Z" fill="var(--color-text)" />
+                    </svg>
+                </a>
+                {{/HasWhatsappWidgetActivated}}
+
+                {{#HasPhoneNumberActivated}}
+                <a href="tel:{{PhoneNumber}}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+                        <path d="M15 12.6364C15 12.8409 14.9645 13.108 14.8935 13.4375C14.8224 13.767 14.7479 14.0265 14.6697 14.2159C14.5206 14.5947 14.0874 14.9962 13.37 15.4205C12.7024 15.8068 12.0419 16 11.3885 16C11.1967 16 11.0085 15.9867 10.8239 15.9602C10.6392 15.9337 10.435 15.8864 10.2113 15.8182C9.98757 15.75 9.82067 15.6951 9.71058 15.6534C9.6005 15.6117 9.40341 15.5341 9.11932 15.4205C8.83523 15.3068 8.66122 15.2386 8.5973 15.2159C7.90128 14.9508 7.27983 14.6364 6.73295 14.2727C5.83097 13.6742 4.89347 12.8561 3.92045 11.8182C2.94744 10.7803 2.1804 9.7803 1.61932 8.81818C1.27841 8.23485 0.983664 7.57197 0.735085 6.82955C0.713778 6.76136 0.649858 6.57576 0.543324 6.27273C0.436789 5.9697 0.363991 5.75947 0.324929 5.64205C0.285866 5.52462 0.234375 5.34659 0.170454 5.10795C0.106534 4.86932 0.0621446 4.65152 0.0372867 4.45455C0.0124287 4.25758 -2.25706e-07 4.05682 -2.14326e-07 3.85227C-1.75549e-07 3.1553 0.181108 2.45076 0.543324 1.73864C0.941051 0.973485 1.31747 0.511364 1.67259 0.352273C1.85014 0.26894 2.09339 0.189394 2.40234 0.113637C2.71129 0.0378789 2.96165 1.64775e-07 3.15341 1.75444e-07C3.25284 1.80976e-07 3.32741 0.0113638 3.37713 0.0340911C3.50497 0.0795457 3.69318 0.367425 3.94176 0.897728C4.01989 1.04167 4.12642 1.24621 4.26136 1.51136C4.39631 1.77652 4.5206 2.01705 4.63423 2.23295C4.74787 2.44886 4.85795 2.65152 4.96449 2.84091C4.9858 2.87121 5.04794 2.96591 5.15092 3.125C5.25391 3.28409 5.33026 3.41856 5.37997 3.52841C5.42969 3.63826 5.45455 3.74621 5.45455 3.85227C5.45455 4.00379 5.35334 4.19318 5.15092 4.42046C4.94851 4.64773 4.72834 4.85606 4.49041 5.04546C4.25249 5.23485 4.03231 5.43561 3.8299 5.64773C3.62749 5.85985 3.52628 6.03409 3.52628 6.17046C3.52628 6.23864 3.54403 6.32386 3.57955 6.42614C3.61506 6.52841 3.64524 6.60606 3.6701 6.65909C3.69496 6.71212 3.74467 6.80303 3.81925 6.93182C3.89382 7.06061 3.93466 7.13258 3.94176 7.14773C4.48153 8.18561 5.09943 9.07576 5.79545 9.81818C6.49148 10.5606 7.32599 11.2197 8.29901 11.7955C8.31321 11.803 8.38068 11.8466 8.50142 11.9261C8.62216 12.0057 8.70739 12.0587 8.7571 12.0852C8.80682 12.1117 8.87962 12.1439 8.9755 12.1818C9.07138 12.2197 9.15128 12.2386 9.2152 12.2386C9.34304 12.2386 9.50639 12.1307 9.70526 11.9148C9.90412 11.6989 10.0923 11.464 10.2699 11.2102C10.4474 10.9564 10.6428 10.7216 10.8558 10.5057C11.0689 10.2898 11.2464 10.1818 11.3885 10.1818C11.4879 10.1818 11.5891 10.2083 11.6921 10.2614C11.7951 10.3144 11.9212 10.3958 12.0703 10.5057C12.2195 10.6155 12.3082 10.6818 12.3366 10.7045C12.5142 10.8182 12.7042 10.9356 12.9066 11.0568C13.109 11.178 13.3345 11.3106 13.5831 11.4545C13.8317 11.5985 14.0234 11.7121 14.1584 11.7955C14.6555 12.0606 14.9254 12.2614 14.968 12.3977C14.9893 12.4508 15 12.5303 15 12.6364Z" fill="var(--color-text)" />
+                    </svg>
+                </a>
+                {{/HasPhoneNumberActivated}}
+
+                <a class="dynamic-mail-to">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+                        <path d="M15.9998 9.00014C15.9998 7.43303 15.509 5.90528 14.5962 4.63146C13.6834 3.35764 12.3946 2.40174 10.9106 1.89801C9.42671 1.39429 7.82228 1.36805 6.32268 1.82298C4.82308 2.27791 3.50365 3.19116 2.54971 4.43445C1.59576 5.67774 1.05522 7.18863 1.00401 8.75489C0.952794 10.3212 1.39348 11.8641 2.26417 13.1671C3.13486 14.47 4.39181 15.4675 5.85849 16.0195C7.32516 16.5714 8.92788 16.65 10.4415 16.2443" stroke="var(--color-text)" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M8.49967 12.3327C10.3406 12.3327 11.833 10.8403 11.833 8.99935C11.833 7.1584 10.3406 5.66602 8.49967 5.66602C6.65875 5.66602 5.16638 7.1584 5.16638 8.99935C5.16638 10.8403 6.65875 12.3327 8.49967 12.3327Z" stroke="var(--color-text)" stroke-width="1.5" />
+                        <path d="M11.8334 6.5V10.25C11.8334 10.8025 12.0529 11.3324 12.4436 11.7231C12.8343 12.1138 13.3642 12.3333 13.9167 12.3333C14.4692 12.3333 14.9991 12.1138 15.3898 11.7231C15.7805 11.3324 16 10.8025 16 10.25V9" stroke="var(--color-text)" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="logo logo-w">
+                <a class="logo-top {{^HasLogo}}logo-text{{/HasLogo}}" href="{{UrlRoot}}">
+                    {{#HasLogo}}<img class="logo-header" src="{{LogoUrl}}" alt="{{CustomTitle}}">{{/HasLogo}}
+                    {{^HasLogo}}<span class="title">{{CustomTitle}}</span>{{/HasLogo}}
+                </a>
+            </div>
+
+            {{#HasOtherLangs}}
+            <div class="dropdown languages">
+                <div class="dropdown-div" data-toggle="dropdown">
+                    <div class="current-lang flag">{{CurrentLang.IsoLang}}</div>
+                    <i class="fi fi-rr-angle-small-down"></i>
+                </div>
+                <ul class="dropdown-menu">
+                    {{#Langs}}
+                    <li><a href="{{UrlLang}}" lang="{{IsoLang}}"><div class="flag">{{IsoLang}}</div></a></li>
+                    {{/Langs}}
+                </ul>
+            </div>
+            {{/HasOtherLangs}}
+        </div>
+
+        <div class="menu-desk">
+            <a class="onglets-menu-desk disappear-2" href="{{UrlRoot}}">{{ResourcesTemplate.pageMenuTitle_home}}</a>
+
+            {{#HasOptions}}
+            <a class="onglets-menu-desk onglets-menu-desk-disappear-1 appear-2" href="{{UrlRoot}}#section-options">{{ResourcesTemplate.Options}}</a>
+            {{/HasOptions}}
+
+            {{#HasSpecialOffers}}
+            <a class="onglets-menu-desk onglets-menu-desk-disappear-1 appear-2" href="{{UrlRoot}}#section-special-offers">{{ResourcesTemplate.pageMenuTitle_special-offers}}</a>
+            {{/HasSpecialOffers}}
+
+            {{#HasBookingActivated}}
+            {{#HasGiftsActivated}}
+            <a class="onglets-menu-desk onglets-menu-desk-disappear-1 appear-3" href="{{UrlRoot}}#section-gifts">{{ResourcesTemplate.GiftsTitle}}</a>
+            {{/HasGiftsActivated}}
+            {{/HasBookingActivated}}
+
+            {{#HasRecommandations}}
+            <a class="onglets-menu-desk" href="{{UrlAround}}">{{ResourcesTemplate.pageMenuTitle_around}}</a>
+            {{/HasRecommandations}}
+
+            <a class="onglets-menu-desk onglets-menu-desk-disappear-1 appear-1" href="{{UrlRoot}}#section-contact">
+                {{ResourcesTemplate.Contact}}
+            </a>
+        </div>
+    </div>
+</header>
+{{/Header}}
+
+{{< Footer}}
+{{#HasAlcoolWarning}}
+<div class="alcool-warning">
+    <span>{{ResourcesTemplate.AlcoolWarning}}</span>
+</div>
+{{/HasAlcoolWarning}}
+<footer class="section-footer">
+    <div class="content-section content-section-footer">
+
+        <div class="title-footer title-footer-1">
+            <a class="logo-footer {{^HasLogo}} logo-text{{/HasLogo}}" href="{{UrlRoot}}">
+                {{#HasLogo}}<img src="{{LogoUrl}}" alt="{{CustomTitle}}-logo">{{/HasLogo}}
+                {{^HasLogo}}<span class="title">{{CustomTitle}}</span>{{/HasLogo}}
+            </a>
+        </div>
+
+        <div class="address-and-mentions">
+            <div class="title-footer title-footer-2">
+                <a class="logo-footer {{^HasLogo}} logo-text{{/HasLogo}}" href="{{UrlRoot}}">
+                    {{#HasLogo}}<img src="{{LogoUrl}}" alt="{{CustomTitle}}-logo">{{/HasLogo}}
+                    {{^HasLogo}}<span class="title">{{CustomTitle}}</span>{{/HasLogo}}
+                </a>
+            </div>
+
+            <div class="address-and-contact-footer">
+                <span>{{AddressLine}},</span>
+                {{#ComplementAdresse}}
+                <span>{{ComplementAdresse}},</span>
+                {{/ComplementAdresse}}
+                {{#DistributionSpeciale}}
+                <span>{{DistributionSpeciale}},</span>
+                {{/DistributionSpeciale}}
+                <span>{{PostalCode}}, {{City}}, {{Country}}</span>
+                {{#HasPhoneNumberActivated}}
+                <a href="tel:{{PhoneNumber}}">
+                    {{PhoneNumber}}
+                </a>
+                {{/HasPhoneNumberActivated}}
+                {{#HasMobilePhoneNumberActivated}}
+                <a href="tel:{{MobilePhoneNumber}}">
+                    {{MobilePhoneNumber}}
+                </a>
+                {{/HasMobilePhoneNumberActivated}}
+            </div>
+
+            <div class="cgv-mentions-and-copy">
+                <a class="legal-notice" href="{{UrlLegalNotice}}">{{ResourcesTemplate.pageMenuTitle_legal-notice}}</a>
+
+                <a href="{{UrlTermsOfSales}}">{{ResourcesTemplate.pageMenuTitle_terms-of-sales}}</a>
+
+                <div class="copyright">
+                    {{ResourcesTemplate.Copyright}} {{CustomTitle}}
+                    <span class="trait-vertical">|</span>
+                    {{ResourcesTemplate.PoweredBy}} <a href="http://www.elloha.com/fr/" target="_blank"><img src="https://static.elloha.com/webgen/img/elloha-white.png" alt=" "></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btn-back-tablet scroll-holder text-center">
+        <a href="javascript:" id="scroll-to-top"><i class="fi fi-rr-up"></i></a>
+    </div>
+</footer>
+{{/Footer}}

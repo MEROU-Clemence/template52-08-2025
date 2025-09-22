@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title>{{ResourcesTemplate.Around}} - {{CustomTitle}} - {{City}} - {{Country}}</title>
+    <meta name="description" content="{{SubtitleAround}}">
+    {{>CommonMetaTags}}
+    <link rel="canonical" href="{{UrlAround}}" />
+    <meta property="og:url" content="{{UrlAround}}" />
+    <meta property="og:title" content="{{ResourcesTemplate.Around}}" />
+    <meta property="og:image" content="{{#Photos.0}}{{UrlMedias}}/crop-300x200/{{IdMedia}}/{{FileNamePhoto}}{{/Photos.0}}" />
+    <meta property="og:description" content="{{SubtitleAround}}" />
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+<body>
+    {{{ScriptAnalytics}}}
+    {{{GoogleTagManagerBody}}}
+    {{>Header}}
+
+    <main>
+        <!-- SECTION AROUND -->
+        <section class="section">
+            <div class="content-section">
+
+                <div class="around-items-w around-big-contain">
+                    {{#OisAssocied}}
+                    <div class="grid-item around-contain" data-id-type="{{IdTypeOiAssocied}}" data-type-label="{{TypeOiAssocied}}" data-lat="{{XOiAssocied}}" data-lng="{{YOiAssocied}}">
+                        <div class="img-presta-contain">
+                            <div class="around-item-type">
+                                <strong>{{TypeOiAssocied}}</strong>
+                                {{#DistanceOiAssocied}}
+                                <span>
+                                    {{ResourcesTemplate.At}} {{DistanceOiAssocied}} {{ResourcesTemplate.Km}} {{ResourcesTemplate.FromOurPlace}}
+                                </span>
+                                {{/DistanceOiAssocied}}
+                            </div>
+
+                            {{#PhotoOiAssocied}}
+                            <img class="bg-img" src="{{UrlMedias}}/crop-550x350/{{IdMedia}}/{{FileNamePhoto}}" alt="{{NamePhoto}}-img-around" />
+                            {{/PhotoOiAssocied}}
+                        </div>
+
+                        <div class="infos-contain-around">
+                            <h3 data-name>{{TitleOiAssocied}}</h3>
+
+                            <div class="around-item-content-w">
+                                <div class="text-description">{{DescriptionOiAssocied}}</div>
+
+                                <div class="more-less-btn link-to-see see-all"><strong>{{ResourcesTemplate.SeeMore}}</strong></div>
+                                <div class="more-less-btn link-to-see see-menos hidden"><strong>{{ResourcesTemplate.SeeLess}}</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="btn-around {{^TextOpinion}}no-opinion{{/TextOpinion}}">
+                            <div class="comment-item-w">
+                                <div class="icon-to-see icon-all btn">{{ResourcesTemplate.WeRecommendIt}}</div>
+                                <div class="icon-to-see icon-menos hidden btn">{{ResourcesTemplate.WeRecommendIt}}</div>
+                                <div class="text-opinion d-none">{{TextOpinion}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/OisAssocied}}
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION MAP -->
+        <div class="section-map section-map-around">
+            <div id="applemapkit" class="fullwidth-mapkit" data-lat="{{X}}" data-lng="{{Y}}" data-string="{{CustomTitle}}, {{AddressLine}}, {{PostalCode}}, {{City}}, {{Country}}.">
+                <div id="mapApple"></div>
+            </div>
+            <div class="content-section">
+                <div class="external-map-contain">
+                    <div data-action="external-map" class="external-map">
+                        <h4>{{ResourcesTemplate.ToCome}}!</h4>
+
+                        <div>
+                            {{AddressLine}},<br>
+                            {{#ComplementAdresse}}
+                            {{ComplementAdresse}},<br>
+                            {{/ComplementAdresse}}
+                            {{#DistributionSpeciale}}
+                            {{DistributionSpeciale}},<br>
+                            {{/DistributionSpeciale}}
+                            {{PostalCode}}, {{City}}, {{Country}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {{>Footer}}
+    {{>CommonScripts}}
+
+</body>
+</html>

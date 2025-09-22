@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{CurrentLang.IsoLang}}" culture="{{CurrentLang.CultureLang}}">
+<head>
+    <title></title>
+    <meta name="description" content="">
+    {{>CommonMetaTags}}
+    {{>FaviconTags}}
+    {{>CommonStylesheets}}
+</head>
+<body>
+    <div class="page-404">
+
+        <main style="background-image: url(https://static.elloha.com/webgen/img/404.jpg)">
+            {{>Header}}
+            <div class="content-404">
+                <h1>{{ResourcesTemplate.404Title}}</h1>
+                <div class="text-404">{{{ResourcesTemplate.404}}}</div>
+                <div><a href="{{UrlRoot}}" class="btn btn-404">{{ResourcesTemplate.pageMenuTitle_home}}</a></div>
+            </div>
+        </main>
+
+        <footer class="section-footer">
+            <div class="content-footer">
+                <div class="col-footer left-logo">
+                    <a class="logo-footer {{^HasLogo}} logo-text{{/HasLogo}}" href="{{UrlRoot}}">
+                        {{#HasLogo}}<img src="{{LogoUrl}}" alt="{{CustomTitle}}">{{/HasLogo}}
+                        {{^HasLogo}}<span class="title">{{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup></span>
+                        <span class="subtitle hidden-xs">{{CustomTypeOi}}</span>{{/HasLogo}}
+                    </a>
+                </div>
+                <div class="col-footer center-address">
+                    <p>
+                        {{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup><br>
+                        {{AddressLine}},<br />{{PostalCode}} {{City}} - {{Country}}
+                    </p>
+                </div>
+                <div class="col-footer center-contact">
+                    <p>
+                        {{#HasPhoneNumberActivated}}
+                        <a href="tel:{{PhoneNumber}}"><i class="las la-phone"></i>{{PhoneNumber}}</a><br />
+                        {{/HasPhoneNumberActivated}}
+                        {{#HasMobilePhoneNumberActivated}}
+                        <a href="tel:{{MobilePhoneNumber}}"><i class="las la-mobile"></i>{{MobilePhoneNumber}}</a><br />
+                        {{/HasMobilePhoneNumberActivated}}
+                        <a class="dynamic-mail-to"><i class="las la-envelope"></i>{{ResourcesTemplate.contactByEmail}}</a>
+                    </p>
+                </div>
+                {{#HasSocialNetworks}}
+                <div class="col-footer right-social-info">
+                    {{#TikTok}}<a href="{{TikTok}}" target="_blank"><i class="fab fa-tiktok"></i></a>{{/TikTok}}
+                    {{#Facebook}}<a href="{{Facebook}}" target="_blank"><i class="lab la-facebook-f"></i></a>{{/Facebook}}
+                    {{#Twitter}}<a href="{{Twitter}}" target="_blank"><i class="lab la-twitter"></i></a>{{/Twitter}}
+                    {{#Pinterest}}<a href="{{Pinterest}}" target="_blank"><i class="lab la-pinterest"></i></a>{{/Pinterest}}
+                    {{#Youtube}}<a href="{{Youtube}}" target="_blank"><i class="lab la-youtube"></i></a>{{/Youtube}}
+                    {{#Instagram}}<a href="{{Instagram}}" target="_blank"><i class="lab la-instagram"></i></a>{{/Instagram}}
+                    {{#Vimeo}}<a href="{{Vimeo}}" target="_blank"><i class="lab la-vimeo"></i></a>{{/Vimeo}}
+                    {{#Linkedin}}<a href="{{Linkedin}}" target="_blank"><i class="lab la-linkedin-in"></i></a>{{/Linkedin}}
+                </div>
+                {{/HasSocialNetworks}}
+            </div>
+
+            <div class="footer-copyright">
+                <p class="copyright">
+                    {{ResourcesTemplate.Copyright}} {{CustomTitle}}<sup class="rating-stars">{{{Rating}}}</sup>
+                    <span class="trait-vertical">|</span>
+                    {{ResourcesTemplate.PoweredBy}} <a href="http://www.elloha.com/fr/" target="_blank"><img src="https://static.elloha.com/webgen/img/elloha.png" alt=" "></a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+{{>CommonScripts}}
+</html>

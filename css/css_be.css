@@ -1,0 +1,5 @@
+@import url(https://static.elloha.com/webgen/css/line-awesome/line-awesome.min.css);
+@import url(common.min.css?v={{CacheVar}});
+@import url(elloha-template_be-52.min.css?v={{CacheVar}});
+@import url(custom.css?v={{Template}}_{{CacheVar}});
+@import url(custom_be.css?v={{Template}}_{{CacheVar}});

@@ -1,0 +1,354 @@
+{{< Widget-BE}}
+<input id="idPrestation" class="hidden" value="{{CurrentPrestation.IdPresta}}">
+<!-- Widget BE pour compte restau et activit�' -->
+{{#isActivity}}
+<div id="section-BE-inner" class="section-home-be">
+    <!--@* Widget full *@-->
+    <section id="widget-full" class="activity">
+
+        <!--@* Bloc de choix de la date *@-->
+        <div class="dates-start" id="bloc-date">
+            <div class="label-subtitle">{{ResourcesTemplate.Arrival}}</div>
+            <div class="bloc-date">
+                <img src="https://static.elloha.com/BE/img/date_range.svg" for="magic-start-date2" alt="{{NamePhoto}}">
+                <div class="dates-from-to-be">
+                    <label for="magic-start-date2">{{ResourcesTemplate.DateActivity}}</label>
+                    <input type="text" id="magic-start-date2" class="date-picker-engine" placeholder="{{Elloha.StartDate}}">
+                </div>
+            </div>
+        </div>
+
+        <!--@* Bouton de recherche *@-->
+        <a class="bloc-btn" href="{{UrlWidget}}" id="bouton-recherche" onclick="buildUrlWidget()">
+            <i class="las la-search"></i>
+            <span>{{ResourcesTemplate.Search}}</span>
+        </a>
+    </section>
+
+</div>
+
+<div class="gifts-and-click-and-collect">
+    <!--Section CC et C&C-->
+    {{#HasGiftCardsActivated}}
+    <section class="div-gift-cards">
+        <a href="{{UrlGifts}}" class="link-gift-cards">
+            <div class="las la-gift"></div>
+            <span>{{ResourcesTemplate.GiftCard}}</span>
+        </a>
+    </section>
+    {{/HasGiftCardsActivated}}
+
+    {{#HasClickAndCollectActivated}}
+    <section class="div-clickAndCollect">
+        <a href="{{UrlClickAndCollect}}" class="link-clickAndCollect">
+            <div class="las la-shopping-bag"></div>
+            <span>{{ResourcesTemplate.ClickAndCollect}}</span>
+        </a>
+    </section>
+    {{/HasClickAndCollectActivated}}
+</div>
+
+{{/isActivity}}
+
+<!-- Widget BE pour h�bergement -->
+{{^isActivity}}
+{{^isRestaurant}}
+<div id="section-BE-inner" class="section-home-be">
+    <!--@* Widget full *@-->
+    <section id="widget-full" class="accommodation">
+
+        <!--@* Bloc de choix de la date *@-->
+        <div class="bloc-date-big-content" id="bloc-date">
+            <div class="dates-start">
+                <div class="label-subtitle">{{ResourcesTemplate.Arrival}}</div>
+                <div class="bloc-date">
+                    <img src="https://static.elloha.com/BE/img/date_range.svg" for="magic-start-date" alt="{{NamePhoto}}">
+                    <div class="dates-from-to-be">
+                        <label for="magic-start-date">{{ResourcesTemplate.DateFrom}}</label>
+                        <input type="text" id="magic-start-date" class="date-picker-engine" placeholder="{{Elloha.StartDate}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dates-end">
+                <div class="label-subtitle">{{ResourcesTemplate.Departure}}</div>
+                <div class="bloc-date">
+                    <img src="https://static.elloha.com/BE/img/date_range.svg" for="magic-end-date" alt="{{NamePhoto}}">
+                    <div class="dates-from-to-be">
+                        <label for="magic-end-date">{{ResourcesTemplate.DateTo}}</label>
+                        <input type="text" id="magic-end-date" class="date-picker-engine" placeholder="{{Elloha.EndDate}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--@* Bloc de choix du pax *@-->
+        <div class="bloc-pax">
+            <div class="label-subtitle">{{ResourcesTemplate.Travellers}}</div>
+            <!--@* Lien pour ouverture de la modale *@-->
+            <a href="#modale-pax" rel="modal:open">
+                <div id="pax">
+                    <div class="pax-composition">
+                        <img src="https://static.elloha.com/BE/img/supervisor_account.svg" alt="{{NamePhoto}}" />
+                        <div class="pax-composition-text">
+                            <span class="room-composition">
+                                <span id="room-number">1 </span>
+                                <span id="room" class="">{{ResourcesTemplate.Offers_BE_Singular}} / </span>
+                                <span id="rooms" class="hidden"> {{ResourcesTemplate.Offers_BE}} / </span>
+                                <span id="room-default" class="hidden">{{ResourcesTemplate.Offers_FolderName_1_Singular}} / </span>
+                                <span id="rooms-default" class="hidden">{{ResourcesTemplate.Offers_FolderName}} / </span>
+                            </span>
+                            <span class="adult-composition">
+                                <span id="adult-number">2 </span>
+                                <span id="adult" class="hidden">{{ResourcesTemplate.Adult}}</span>
+                                <span id="adults" class="">{{ResourcesTemplate.Adults}}</span>
+                            </span>
+                            <span class="enfant-composition d-none">
+                                <span id="child-number"> </span>
+                                <span id="child" class="">{{ResourcesTemplate.Child}}</span>
+                                <span id="childs" class="hidden">{{ResourcesTemplate.Childs}}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <img src="https://static.elloha.com/BE/img/arrow_drop_down.svg" alt="{{NamePhoto}}">
+                </div>
+            </a>
+
+            <!--@* Modale masqu�e par d�faut  *@-->
+            <div id="modale-pax" style="display: none;">
+
+                <!--@*Nombre d'adultes'*@-->
+                <div class="wrap-btn modale-pax-line">
+                    <span class="line-adultes-title">{{ResourcesTemplate.Adult(s)}}</span>
+                    <div class="input-quantity">
+                        <button type="button" class="adult-quantity-minus p-e-all">
+                            <img src="https://static.elloha.com/BE/img/remove.svg">
+                        </button>
+                        <input class="adult-quantity" value="2" min="1" max="100">
+                        <button type="button" class="adult-quantity-plus p-e-all">
+                            <img src="https://static.elloha.com/BE/img/add.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <!--@*Nombre d'enfants'*@-->
+                <div class="wrap-btn modale-pax-line ">
+                    <span class="line-enfants-title">{{ResourcesTemplate.Child(s)}}</span>
+                    <div class="input-quantity input-child-quantity">
+                        <button type="button" class="child-quantity-minus p-e-all disable">
+                            <img src="https://static.elloha.com/BE/img/remove.svg">
+                        </button>
+                        <input class="child-quantity" type="text" value="0" min="0" max="100">
+                        <button type="button" class="child-quantity-plus p-e-all">
+                            <img src="https://static.elloha.com/BE/img/add.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <!--@* Age des enfants *@-->
+                <div id="children-ages" class="d-none"></div>
+
+                <!--Ajouter condtion si + d'une presta-->
+                {{#MultiplePrestas}}
+                <!--@*Nombre de chambre*@-->
+                <div class="wrap-btn modale-pax-line">
+                    <span class="line-chambres-title">{{ResourcesTemplate.Offers_MenuTitle}}</span>
+                    <div class="input-quantity input-room-quantity">
+                        <button type="button" class="room-quantity-minus disable p-e-all">
+                            <img src="https://static.elloha.com/BE/img/remove.svg">
+                        </button>
+                        <input class="room-quantity" type="text" value="0" min="1" max="100">
+                        <button type="button" class="room-quantity-plus p-e-all">
+                            <img src="https://static.elloha.com/BE/img/add.svg">
+                        </button>
+                    </div>
+                </div>
+                {{/MultiplePrestas}}
+            </div>
+        </div>
+
+        <!--@* Bouton de recherche *@-->
+        <a class="bloc-btn" href="{{UrlWidget}}" id="bouton-recherche" onclick="buildUrlWidget()">
+            <i class="las la-search"></i>
+            <span>{{ResourcesTemplate.Search}}</span>
+        </a>
+    </section>
+
+</div>
+
+<div class="gifts-and-click-and-collect">
+    <!--Section CC et C&C-->
+    {{#HasGiftCardsActivated}}
+    <section class="div-gift-cards">
+        <a href="{{UrlGifts}}" class="link-gift-cards">
+            <div class="las la-gift"></div>
+            <span>{{ResourcesTemplate.GiftCard}}</span>
+        </a>
+    </section>
+    {{/HasGiftCardsActivated}}
+
+    {{#HasClickAndCollectActivated}}
+    <section class="div-clickAndCollect">
+        <a href="{{UrlClickAndCollect}}" class="link-clickAndCollect">
+            <div class="las la-shopping-bag"></div>
+            <span>{{ResourcesTemplate.ClickAndCollect}}</span>
+        </a>
+    </section>
+    {{/HasClickAndCollectActivated}}
+</div>
+{{/isRestaurant}}
+{{/isActivity}}
+{{/Widget-BE}}
+
+{{< Widget-BE-secure}}
+<div class="widget-bottom-secure">
+    <div class="secure-booking-message">{{ResourcesTemplate.BookingLabel}}</div>
+    <div class="secure-booking-payment-w">
+        <img src="https://static.elloha.com/webgen/img/lock.png" alt="secure">
+        <span>{{ResourcesTemplate.PaymentSecuredBy}}</span>
+        {{#HasStripe}}<img src="https://static.elloha.com/webgen/img/stripe.png" alt="Stripe">{{/HasStripe}}
+        {{#HasVisa}}<img src="https://static.elloha.com/webgen/img/visa.png" alt="Visa">{{/HasVisa}}
+        {{#HasMastercard}}<img src="https://static.elloha.com/webgen/img/mastercard.png" alt="MasterCard">{{/HasMastercard}}
+        {{#HasAmex}}<img src="https://static.elloha.com/webgen/img/amex.png" alt="AmericanExpress">{{/HasAmex}}
+        {{#HasPaybox}}<img src="https://static.elloha.com/webgen/img/pqybox.png" alt="Paybox">{{/HasPaybox}}
+        {{#HasMangoPay}}<img src="https://static.elloha.com/webgen/img/mangopay.png" alt="MangoPay">{{/HasMangoPay}}
+        {{#HasAncv}}<img src="https://static.elloha.com/webgen/img/ancv.png" alt="ANCV">{{/HasAncv}}
+        {{#HasSofort}}<img src="https://static.elloha.com/webgen/img/sofort-pink.png" alt="Sofort">{{/HasSofort}}
+        {{#HasBancontact}}<img src="https://static.elloha.com/webgen/img/bancontact.png" alt="Bancontact">{{/HasBancontact}}
+        {{#HasGiropay}}<img src="https://static.elloha.com/webgen/img/giropay.png" alt="Giropay">{{/HasGiropay}}
+        {{#HasIdeal}}<img src="https://static.elloha.com/webgen/img/ideal.png" alt="Ideal">{{/HasIdeal}}
+        {{#HasKlarna}}<img src="https://static.elloha.com/webgen/img/klarna.png" alt="Klarna">{{/HasKlarna}}
+        {{#HasPayzen}}<img src="https://static.elloha.com/webgen/img/payzen.png" alt="Payzen">{{/HasPayzen}}
+    </div>
+</div>
+{{/Widget-BE-secure}}
+
+{{< Newsletter}}
+<div class="section-newsletter">
+    <div class="bg-img" style="background: linear-gradient(to top, #00000090, #00000090), url(https://static.elloha.com/webgen/img/contact.jpg) no-repeat center; background-size: cover !important;">
+        <div class="newsletter-content">
+            <div class="icon-big"><i class="las la-envelope title-white"></i></div>
+            <div class="section-title">
+                <h2>{{ResourcesTemplate.NewsletterMail}}</h2>
+            </div>
+            <form id="Nl-form-footer" action="" method="GET" class="form-inline form-newsletter">
+                <button id="Nl-footer-submit" class="pull-right" type="button">OK</button>
+                <div class="hp">
+                    <label>Si vous �tes un humain, laissez ce champ vide</label>
+                    <input type="text" name="comment" id="Hp-footer">
+                </div>
+                <input id="Nl-footer-email" name="Nl-footer-email" type="email" placeholder="{{ResourcesTemplate.YourEmail}}" class="form-control" data-error="{{ResourcesTemplate.EmailError}}" required>
+                <p id="Nl-footer-result" class="form-result hidden"></p>
+
+                <div id="blockCaptcha" class="d-none hcaptcha"> </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{/Newsletter}}
+
+{{< Cookies}}
+{{^IsDemoMode}}
+{{! COOKIES }}
+<button id="cookie" style="background-color:#000;color:#fff;" aria-label="AcceptCookies"><i class="las la-cookie-bite"></i></button>
+<script>
+window.CookieConsent.init({
+    modalMainTextMoreLink: null,
+    barTimeout: 1000,
+    theme: {
+        barColor: '#fff',
+        barTextColor: '#000',
+        barMainButtonColor: '#000',
+        barMainButtonTextColor: '#fff',
+        modalMainButtonColor: '#000',
+        modalMainButtonTextColor: '#FFF',
+    },
+    language: {
+        current: 'fr',
+        locale: {
+            fr: {
+                barMainTitle: '{{{ResourcesTemplate.CookiesTitle}}}',
+                barMainText: "{{{ResourcesTemplate.CookiesText}}}",
+                closeAriaLabel: 'close',
+                barBtnAcceptAll: '{{{ResourcesTemplate.BtnAccept}}}',
+                barLinkSetting: '{{{ResourcesTemplate.BtnSettings}}}',
+                modalMainTitle: '{{{ResourcesTemplate.BtnSettings}}}',
+                modalBtnSave: '{{{ResourcesTemplate.SaveChoices}}}',
+                modalBtnAcceptAll: '{{{ResourcesTemplate.AcceptAll}}}',
+                modalAffectedSolutions: '{{{ResourcesTemplate.CookiesRelated}}}',
+                learnMore: 'Learn More',
+                on: 'On',
+                off: 'Off',
+                enabled: 'is enabled.',
+                disabled: 'is disabled.',
+                checked: 'checked',
+                unchecked: 'unchecked',
+            }
+        }
+    },
+    categories: {
+        necessary: {
+            needed: true,
+            wanted: true,
+            checked: true,
+            language: {
+                locale: {
+                    fr: {
+                        name: '{{{ResourcesTemplate.Required}}}',
+                        description: '{{{ResourcesTemplate.CookiesRequired}}}',
+                    }
+                }
+            }
+        },
+        various: {
+            needed: false,
+            wanted: false,
+            checked: true,
+            language: {
+                locale: {
+                    fr: {
+                        name: '{{{ResourcesTemplate.NoRequired}}}',
+                        description: '{{{ResourcesTemplate.CookiesNoRequired}}}',
+                    }
+                }
+            }
+        }
+    },
+    services: {
+        analytics: {
+            category: 'various',
+            type: 'dynamic-script',
+            search: 'analytics',
+            cookies: [
+                {
+                    name: '_gid',
+                    domain: `.${window.location.hostname}`
+                },
+                {
+                    name: /^_ga/,
+                    domain: `.${window.location.hostname}`
+                }
+            ],
+            language: {
+                locale: {
+                    fr: {
+                        name: 'Google Analytics'
+                    }
+                }
+            }
+        }
+    }
+});
+</script>
+{{/IsDemoMode}}
+{{/Cookies}}
+
+{{< Captcha}}
+<div class="bloc-contact pb-0">
+    <div class="form-line center-btn">
+        <input id="Contact-form-submit" type="button" class="btn btn-primary" value="{{ResourcesTemplate.Send}}">
+    </div>
+    <p id="Email-result" class="title-color-1 form-result hidden"></p>
+</div>
+<div id="blockCaptcha" class="d-none hcaptcha"></div>
+{{/Captcha}}
